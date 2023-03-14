@@ -21,6 +21,6 @@
 	<title>Lucas Neuhaus</title>
 </svelte:head>
 
-<main class="min-v-screen min-h-screen bg-blue-50">
+<main class="flex min-h-screen flex-col items-center justify-center bg-blue-50">
 	<slot />
 </main>
