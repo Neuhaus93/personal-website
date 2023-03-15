@@ -8,6 +8,9 @@
 	import react from '$lib/icons/react';
 	import svelte from '$lib/icons/svelte';
 	import typescript from '$lib/icons/typescript';
+	import open from '$lib/icons/open';
+	import calendar_outline from '$lib/icons/calendar-outline';
+	import person_circle_outline from '$lib/icons/person-circle-outline';
 	import type { IconName } from '$lib/icons/types';
 
 	type DisplayIcon = {
@@ -82,6 +85,21 @@
 			name: 'typescript',
 			svg: typescript,
 			viewBox: '0 0 400 400'
+		},
+		{
+			name: 'open',
+			svg: open,
+			viewBox: '0 0 512 512'
+		},
+		{
+			name: 'calendar-outline',
+			svg: calendar_outline,
+			viewBox: '0 0 512 512'
+		},
+		{
+			name: 'person-circle-outline',
+			svg: person_circle_outline,
+			viewBox: '0 0 512 512'
 		}
 	];
 	let displayIcon: DisplayIcon | undefined = icons.find((e) => e.name === name);

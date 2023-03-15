@@ -3,6 +3,7 @@
 	import type { ComponentProps } from 'svelte';
 	import { ABOUT_ME } from '$lib/constants';
 	import photo from '$lib/assets/perfil.jpg';
+	import JobCard from './JobCard.svelte';
 
 	const socials: {
 		icon: ComponentProps<Icon>['name'];
@@ -27,8 +28,49 @@
 	}[] = [
 		{ icon: 'typescript', hoveredColor: 'blue' },
 		{ icon: 'react' },
-		{ icon: 'node' },
-		{ icon: 'svelte' }
+		{ icon: 'node' }
+	];
+
+	const extraSkills = [
+		'Material UI',
+		'tailwindcss',
+		'Svelte',
+		'REST',
+		'GraphQL',
+		'AWS',
+		'Prisma',
+		'PostgreSQL',
+		'MongoDB',
+		'git',
+		'bash'
+	];
+
+	const jobs: ComponentProps<JobCard>['job'][] = [
+		{
+			company: 'Lazzy Inc.',
+			role: 'Front End Developer',
+			date: 'March 2022 - March 2023',
+			description:
+				'The project was a management system in React for admin users.',
+			skills: ['React', 'Material UI', 'AWS Lambdas'],
+			recomendation:
+				'https://drive.google.com/file/d/1D-svPsvsQFkgMDkwbNGBQrjgjhlo0GX2/view?usp=sharing'
+		},
+		{
+			company: 'Convert.com',
+			role: 'Front End Developer',
+			date: 'January 2021 - March 2022',
+			description:
+				'Migrated an ongoing PHP project to a fully tested Next.js/React project with Typescript and Material UI.',
+			skills: ['Next.js', 'Material UI', 'Typescript']
+		},
+		{
+			company: 'Freelance',
+			role: 'Full Stack Developer',
+			date: 'February 2020 - Present',
+			description:
+				'Completed multiple freelance jobs in websites like upwork.com and freelance.com.'
+		}
 	];
 </script>
 
@@ -81,12 +123,24 @@
 	<div class="w-full">
 		<h2>Skillset</h2>
 
-		<div class="grid grid-cols-2 gap-y-16 pt-20 pb-8 sm:grid-cols-4">
+		<div
+			class="grid grid-cols-1 gap-y-16 pt-20 pb-8 sm:grid-cols-2 lg:grid-cols-4"
+		>
 			{#each skills as skill}
-				<div class={`h-16 justify-self-center`}>
+				<div class={`h-16 self-center justify-self-center`}>
 					<Icon name={skill.icon} height="100%" />
 				</div>
 			{/each}
+			<div>
+				<p>
+					{#each extraSkills as extraSkill, i}
+						<span class=""
+							>{extraSkill + `${i < extraSkills.length - 1 ? ' • ' : ''}`}</span
+						>
+					{/each}
+					<span>...</span>
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -95,21 +149,21 @@
 	<div class="w-full">
 		<h2>Previous Work</h2>
 
-		<h4>Lazzy Inc.</h4>
-
-		<h4>Convert.com</h4>
-
-		<h4>Freelancing</h4>
+		<div class="grid grid-cols-1 gap-6 pt-14 md:grid-cols-2 lg:grid-cols-3">
+			{#each jobs as job}
+				<JobCard {job} />
+			{/each}
+		</div>
 	</div>
 </section>
 
-<footer>
+<footer class="mt-6 lg:mt-8">
 	<p class="py-3 text-center text-sm">Made with Svelte ❤️</p>
 </footer>
 
 <style lang="postcss">
 	section {
-		@apply mx-auto flex max-w-6xl px-10 py-12;
+		@apply mx-auto flex px-10 py-12 md:max-w-4xl lg:max-w-5xl xl:max-w-7xl;
 	}
 
 	section.hero {

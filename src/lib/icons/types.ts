@@ -7,4 +7,7 @@ export type IconName =
 	| 'react'
 	| 'svelte'
 	| 'typescript'
+	| 'open'
+	| 'calendar-outline'
+	| 'person-circle-outline'
 	| 'launch';
