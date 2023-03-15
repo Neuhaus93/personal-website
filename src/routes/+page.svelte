@@ -77,7 +77,7 @@
 
 		<div class="mt-4 flex justify-center gap-2 sm:justify-start">
 			{#each socialsArray as social}
-				<a class="w-7 sm:w-8" target="_blank" href={social.href}>
+				<a class="w-7 sm:w-8" target="_blank" href={social.href} rel="external">
 					<Icon name={social.icon} title={social.title} width="100%" />
 				</a>
 			{/each}

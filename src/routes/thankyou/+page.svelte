@@ -9,11 +9,11 @@
 	<div class="mt-10 text-center">
 		<p>I will reach back as soon as I can.</p>
 		<p>
-			Feel free to also message on <a
+			Feel free to also message me on <a
 				class="text-blue-500 underline"
 				target="_blank"
 				href={SOCIALS.linkedin.href}>LinkedIn</a
-			> if you like.
+			>.
 		</p>
 	</div>
 

@@ -5,6 +5,7 @@
 	import logo_linkedin from '$lib/icons/logo-linkedin';
 	import launch from '$lib/icons/launch.svg?raw';
 	import arrowBackOutline from '$lib/icons/arrow-back-outline.svg?raw';
+	import emailFilled from '$lib/icons/email-filled.svg?raw';
 	import node from '$lib/icons/node';
 	import react from '$lib/icons/react';
 	import svelte from '$lib/icons/svelte';
@@ -111,6 +112,11 @@
 		{
 			name: 'arrow-back-outline',
 			svg: arrowBackOutline,
+			viewBox: '0 0 24 24'
+		},
+		{
+			name: 'email-filled',
+			svg: emailFilled,
 			viewBox: '0 0 24 24'
 		}
 	];

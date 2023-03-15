@@ -12,4 +12,5 @@ export type IconName =
 	| 'person-circle-outline'
 	| 'undraw-interview'
 	| 'arrow-back-outline'
+	| 'email-filled'
 	| 'launch';
