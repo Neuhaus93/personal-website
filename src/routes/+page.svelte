@@ -75,12 +75,21 @@
 			<p class="text-md mt-1 sm:text-lg">Full-stack software developer</p>
 		</div>
 
-		<div class="mt-4 flex justify-center gap-2 sm:justify-start">
+		<div class="mt-4 flex justify-center gap-2.5 sm:justify-start">
 			{#each socialsArray as social}
 				<a class="w-7 sm:w-8" target="_blank" href={social.href} rel="external">
 					<Icon name={social.icon} title={social.title} width="100%" />
 				</a>
 			{/each}
+			<a
+				class="h-7 rounded bg-txt py-1 px-2 text-background sm:h-8"
+				target="_blank"
+				href={'https://drive.google.com/file/d/1A-Teu_AlzLZlWx54EtsrBpDua0-XmifJ/view?usp=sharing'}
+				rel="external"
+				title="Resume"
+			>
+				Resume
+			</a>
 		</div>
 	</div>
 
@@ -193,7 +202,7 @@
 	}
 
 	.blink {
-		animation: blink steps(2, jump-none) 1s infinite;
+		animation: blink steps(2, jump-none) 1200ms infinite;
 	}
 
 	@keyframes blink {
