@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	:root {
+		--color-background: 248 250 252;
+		--color-text: 30 41 59;
+		--color-button: 9 107 202;
+	}
+
+	html {
+		font-family: Proxima Nova, 'Bitter', serif;
+		/* letter-spacing: 1px; */
+		@apply text-txt;
+	}
+}
+
 @layer components {
 	.btn {
-		@apply inline-flex items-center justify-center rounded-lg bg-blue-500 py-2 px-4 font-semibold text-white shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+		@apply inline-flex items-center justify-center rounded-lg bg-button py-2 px-4 font-semibold text-white shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-75;
 	}
+
 	.btn > :not([hidden]) ~ :not([hidden]) {
 		@apply ml-2;
 	}

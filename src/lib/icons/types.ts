@@ -2,4 +2,12 @@ export type IconName =
 	| 'under-construction'
 	| 'blank-canvas'
 	| 'logo-github'
-	| 'logo-linkedin';
+	| 'logo-linkedin'
+	| 'node'
+	| 'react'
+	| 'svelte'
+	| 'typescript'
+	| 'open'
+	| 'calendar-outline'
+	| 'person-circle-outline'
+	| 'launch';
