@@ -11,4 +11,5 @@ export type IconName =
 	| 'calendar-outline'
 	| 'person-circle-outline'
 	| 'undraw-interview'
+	| 'arrow-back-outline'
 	| 'launch';

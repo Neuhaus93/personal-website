@@ -1,27 +1,12 @@
 <script lang="ts">
 	import { Icon } from '$lib/components/index';
 	import type { ComponentProps } from 'svelte';
-	import { ABOUT_ME } from '$lib/constants';
+	import { ABOUT_ME, SOCIALS } from '$lib/constants';
 	import photo from '$lib/assets/perfil.jpg';
 	import JobCard from './JobCard.svelte';
 	import ContactForm from './ContactForm.svelte';
 
-	const socials: {
-		icon: ComponentProps<Icon>['name'];
-		href: string;
-		title: string;
-	}[] = [
-		{
-			icon: 'logo-github',
-			href: 'https://github.com/Neuhaus93',
-			title: 'Github'
-		},
-		{
-			icon: 'logo-linkedin',
-			href: 'https://www.linkedin.com/in/lucas-neuhaus/',
-			title: 'LinkedIn'
-		}
-	];
+	const socialsArray = Object.values(SOCIALS);
 
 	const skills: {
 		icon: ComponentProps<Icon>['name'];
@@ -91,7 +76,7 @@
 		</div>
 
 		<div class="mt-4 flex justify-center gap-2 sm:justify-start">
-			{#each socials as social}
+			{#each socialsArray as social}
 				<a class="w-7 sm:w-8" target="_blank" href={social.href}>
 					<Icon name={social.icon} title={social.title} width="100%" />
 				</a>
@@ -161,7 +146,7 @@
 <section>
 	<div class="w-full">
 		<h2>Get in Touch</h2>
-		<div class="grid grid-cols-1 gap-x-4 pt-14 lg:grid-cols-3">
+		<div class="grid grid-cols-1 gap-x-4 pt-12 lg:grid-cols-3">
 			<div
 				class="col-span-1 hidden h-44 self-center justify-self-center lg:block xl:h-60"
 			>

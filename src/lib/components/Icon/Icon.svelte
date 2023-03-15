@@ -3,7 +3,8 @@
 	import blank_canvas from '$lib/icons/blank-canvas';
 	import logo_github from '$lib/icons/logo-github';
 	import logo_linkedin from '$lib/icons/logo-linkedin';
-	import launch from '$lib/icons/launch';
+	import launch from '$lib/icons/launch.svg?raw';
+	import arrowBackOutline from '$lib/icons/arrow-back-outline.svg?raw';
 	import node from '$lib/icons/node';
 	import react from '$lib/icons/react';
 	import svelte from '$lib/icons/svelte';
@@ -106,6 +107,11 @@
 			name: 'undraw-interview',
 			svg: undrawInterview,
 			viewBox: '0 0 833.22212 633.11008'
+		},
+		{
+			name: 'arrow-back-outline',
+			svg: arrowBackOutline,
+			viewBox: '0 0 24 24'
 		}
 	];
 	let displayIcon: DisplayIcon | undefined = icons.find((e) => e.name === name);

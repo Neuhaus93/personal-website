@@ -1,9 +1,9 @@
+<script lang="ts">
+	import { Icon } from '$lib/components/index';
+</script>
+
 <div class="container">
-	<form
-		target="_blank"
-		action="https://formsubmit.co/lucas.neuhaus93@gmail.com"
-		method="POST"
-	>
+	<form action="https://formsubmit.co/lucas.neuhaus93@gmail.com" method="POST">
 		<label for="name" class="col-span-2 sm:col-span-1">
 			<span>Full Name</span>
 			<input
@@ -36,10 +36,17 @@
 				required
 			/>
 		</label>
+		<input
+			type="hidden"
+			name="_next"
+			value="http://localhost:5173/construction"
+		/>
 		<button
 			type="submit"
-			class="btn col-span-2 float-right justify-self-end px-10">Send</button
+			class="btn col-span-2 float-right justify-self-end px-10"
 		>
+			<span>Send</span>
+		</button>
 	</form>
 </div>
 
