@@ -20,11 +20,21 @@
 			title: 'LinkedIn'
 		}
 	];
+
+	const skills: {
+		icon: ComponentProps<Icon>['name'];
+		hoveredColor?: string;
+	}[] = [
+		{ icon: 'typescript', hoveredColor: 'blue' },
+		{ icon: 'react' },
+		{ icon: 'node' },
+		{ icon: 'svelte' }
+	];
 </script>
 
 <div class="mt-8 sm:mt-12" />
 
-<section>
+<section class="hero">
 	<div class="flex flex-col">
 		<div class="text-center sm:text-start">
 			<p class="text-md sm:text-lg">Hello, I'm</p>
@@ -51,14 +61,14 @@
 	</div>
 </section>
 
-<section class="relative">
+<section class="hero relative sm:mt-10">
 	<img
-		class="h-44 rounded-full border-4 border-white shadow-md sm:h-52"
+		class="h-44 rounded-full border-4 border-white shadow-md md:h-52"
 		alt="profile"
 		src={photo}
 	/>
 
-	<div class="sm:ml-5` mt-10 flex flex-col gap-4 sm:mt-0 lg:ml-10">
+	<div class="mt-10 flex flex-col gap-4 sm:ml-5 sm:mt-0 lg:ml-10">
 		{#each ABOUT_ME as text}
 			<p class="text-sm leading-7 text-white sm:text-base">{text}</p>
 		{/each}
@@ -68,8 +78,22 @@
 </section>
 
 <section>
-	<div>
-		<h2 class="text-lg font-bold">Previous Work</h2>
+	<div class="w-full">
+		<h2>Skillset</h2>
+
+		<div class="grid grid-cols-2 gap-y-16 pt-20 pb-8 sm:grid-cols-4">
+			{#each skills as skill}
+				<div class={`h-16 justify-self-center`}>
+					<Icon name={skill.icon} height="100%" />
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="w-full">
+		<h2>Previous Work</h2>
 
 		<h4>Lazzy Inc.</h4>
 
@@ -79,19 +103,21 @@
 	</div>
 </section>
 
-<div class="mt-8 sm:mt-12" />
-
 <footer>
-	<p class="text-center text-sm">Made with Svelte ❤️</p>
+	<p class="py-3 text-center text-sm">Made with Svelte ❤️</p>
 </footer>
 
 <style lang="postcss">
 	section {
-		@apply mx-auto flex max-w-6xl flex-col items-center justify-between px-10 py-12 sm:flex-row;
+		@apply mx-auto flex max-w-6xl px-10 py-12;
 	}
 
-	section + section {
-		@apply mt-0 sm:mt-8;
+	section.hero {
+		@apply flex-col items-center justify-between sm:flex-row;
+	}
+
+	section h2 {
+		@apply flex-1 text-center text-3xl font-bold;
 	}
 
 	.section-bg {
@@ -102,7 +128,6 @@
 		top: -5px;
 		bottom: 0px;
 		transform: skew(-3deg, -1.3deg);
-		/* background-color: #6c63ff; */
 		background: rgb(34, 118, 195);
 		background: linear-gradient(
 			0deg,

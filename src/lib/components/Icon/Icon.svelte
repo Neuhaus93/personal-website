@@ -4,6 +4,10 @@
 	import logo_github from '$lib/icons/logo-github';
 	import logo_linkedin from '$lib/icons/logo-linkedin';
 	import launch from '$lib/icons/launch';
+	import node from '$lib/icons/node';
+	import react from '$lib/icons/react';
+	import svelte from '$lib/icons/svelte';
+	import typescript from '$lib/icons/typescript';
 	import type { IconName } from '$lib/icons/types';
 
 	type DisplayIcon = {
@@ -58,6 +62,26 @@
 			name: 'launch',
 			svg: launch,
 			viewBox: '0 0 853.29744 818'
+		},
+		{
+			name: 'node',
+			svg: node,
+			viewBox: '0 0 640 512'
+		},
+		{
+			name: 'react',
+			svg: react,
+			viewBox: '0 0 512 512'
+		},
+		{
+			name: 'svelte',
+			svg: svelte,
+			viewBox: '0 0 60.900204 78.582375'
+		},
+		{
+			name: 'typescript',
+			svg: typescript,
+			viewBox: '0 0 400 400'
 		}
 	];
 	let displayIcon: DisplayIcon | undefined = icons.find((e) => e.name === name);

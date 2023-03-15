@@ -3,4 +3,8 @@ export type IconName =
 	| 'blank-canvas'
 	| 'logo-github'
 	| 'logo-linkedin'
+	| 'node'
+	| 'react'
+	| 'svelte'
+	| 'typescript'
 	| 'launch';
