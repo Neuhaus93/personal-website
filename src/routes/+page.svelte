@@ -1,26 +1,12 @@
 <script lang="ts">
 	import { Icon } from '$lib/components/index';
 	import type { ComponentProps } from 'svelte';
-	import { ABOUT_ME } from '$lib/constants';
+	import { ABOUT_ME, SOCIALS } from '$lib/constants';
 	import photo from '$lib/assets/perfil.jpg';
 	import JobCard from './JobCard.svelte';
+	import ContactForm from './ContactForm.svelte';
 
-	const socials: {
-		icon: ComponentProps<Icon>['name'];
-		href: string;
-		title: string;
-	}[] = [
-		{
-			icon: 'logo-github',
-			href: 'https://github.com/Neuhaus93',
-			title: 'Github'
-		},
-		{
-			icon: 'logo-linkedin',
-			href: 'https://www.linkedin.com/in/lucas-neuhaus/',
-			title: 'LinkedIn'
-		}
-	];
+	const socialsArray = Object.values(SOCIALS);
 
 	const skills: {
 		icon: ComponentProps<Icon>['name'];
@@ -90,8 +76,8 @@
 		</div>
 
 		<div class="mt-4 flex justify-center gap-2 sm:justify-start">
-			{#each socials as social}
-				<a class="w-7 sm:w-8" target="_blank" href={social.href}>
+			{#each socialsArray as social}
+				<a class="w-7 sm:w-8" target="_blank" href={social.href} rel="external">
 					<Icon name={social.icon} title={social.title} width="100%" />
 				</a>
 			{/each}
@@ -157,13 +143,29 @@
 	</div>
 </section>
 
+<section>
+	<div class="w-full">
+		<h2>Get in Touch</h2>
+		<div class="grid grid-cols-1 gap-x-4 pt-12 lg:grid-cols-3">
+			<div
+				class="col-span-1 hidden h-44 self-center justify-self-center lg:block xl:h-60"
+			>
+				<Icon name="undraw-interview" height="100%" />
+			</div>
+			<div class="col-span-2">
+				<ContactForm />
+			</div>
+		</div>
+	</div>
+</section>
+
 <footer class="mt-6 lg:mt-8">
 	<p class="py-3 text-center text-sm">Made with Svelte ❤️</p>
 </footer>
 
 <style lang="postcss">
 	section {
-		@apply mx-auto flex px-10 py-12 md:max-w-4xl lg:max-w-5xl xl:max-w-7xl;
+		@apply container mx-auto flex px-10 py-12;
 	}
 
 	section.hero {

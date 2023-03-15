@@ -10,4 +10,7 @@ export type IconName =
 	| 'open'
 	| 'calendar-outline'
 	| 'person-circle-outline'
+	| 'undraw-interview'
+	| 'arrow-back-outline'
+	| 'email-filled'
 	| 'launch';
