@@ -6,12 +6,13 @@
 	import launch from '$lib/icons/launch.svg?raw';
 	import arrowBackOutline from '$lib/icons/arrow-back-outline.svg?raw';
 	import emailFilled from '$lib/icons/email-filled.svg?raw';
+	import pricetags from '$lib/icons/pricetags.svg?raw';
+	import calendar from '$lib/icons/calendar.svg?raw';
 	import node from '$lib/icons/node';
 	import react from '$lib/icons/react';
 	import svelte from '$lib/icons/svelte';
 	import typescript from '$lib/icons/typescript';
 	import open from '$lib/icons/open';
-	import calendar_outline from '$lib/icons/calendar-outline';
 	import person_circle_outline from '$lib/icons/person-circle-outline';
 	import undrawInterview from '$lib/icons/undraw-interview';
 	import type { IconName } from '$lib/icons/types';
@@ -95,9 +96,9 @@
 			viewBox: '0 0 512 512'
 		},
 		{
-			name: 'calendar-outline',
-			svg: calendar_outline,
-			viewBox: '0 0 512 512'
+			name: 'calendar',
+			svg: calendar,
+			viewBox: '0 0 24 24'
 		},
 		{
 			name: 'person-circle-outline',
@@ -117,6 +118,11 @@
 		{
 			name: 'email-filled',
 			svg: emailFilled,
+			viewBox: '0 0 24 24'
+		},
+		{
+			name: 'pricetags',
+			svg: pricetags,
 			viewBox: '0 0 24 24'
 		}
 	];

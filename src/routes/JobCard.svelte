@@ -31,11 +31,12 @@
 
 	<div class="mt-2 rounded-sm bg-blue-50 p-2 text-sm shadow-inner">
 		<p class="inline-flex items-center">
-			<Icon class="mr-1 pb-0.5" name="person-circle-outline" width={14} />
+			<Icon class="mr-1 pb-0.5" name="pricetags" width={14} />
 			{job.role}
 		</p>
+		<br />
 		<p class="mt-0.5 inline-flex items-center">
-			<Icon class="mr-1 pb-0.5" name="calendar-outline" width={14} />
+			<Icon class="mr-1 pb-0.5" name="calendar" width={14} />
 			{job.date}
 		</p>
 	</div>
