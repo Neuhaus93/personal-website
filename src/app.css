@@ -7,6 +7,13 @@
 		--color-background: 248 250 252;
 		--color-text: 30 41 59;
 		--color-button: 9 107 202;
+		--color-input-bg: 255 255 255;
+	}
+
+	html[data-theme='dark'] {
+		--color-background: 15 23 42;
+		--color-text: 148 163 184;
+		--color-input-bg: 30 41 59;
 	}
 
 	html {
@@ -17,6 +24,11 @@
 }
 
 @layer components {
+	input,
+	textarea {
+		@apply bg-inputBg;
+	}
+
 	.btn {
 		@apply inline-flex items-center justify-center rounded-lg bg-button py-2 px-4 font-semibold text-white shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-75;
 	}

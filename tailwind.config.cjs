@@ -12,7 +12,8 @@ module.exports = {
 				black: colors.black,
 				background: 'rgb(var(--color-background) / 1)',
 				txt: 'rgb(var(--color-text) / 1)',
-				button: 'rgb(var(--color-button) / 1)'
+				button: 'rgb(var(--color-button) / 1)',
+				inputBg: 'rgb(var(--color-input-bg) / 1)'
 			}
 		}
 	},
