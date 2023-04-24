@@ -84,7 +84,7 @@
 			<a
 				class="h-7 rounded bg-txt py-1 px-2 text-background sm:h-8"
 				target="_blank"
-				href={'https://drive.google.com/file/d/1A-Teu_AlzLZlWx54EtsrBpDua0-XmifJ/view?usp=sharing'}
+				href={'https://drive.google.com/file/d/1jmXsP9BDxLbJmWG1GF10qWuT95InFyVm/view?usp=sharing'}
 				rel="external"
 				title="Resume"
 			>
