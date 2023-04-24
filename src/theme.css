@@ -1,0 +1,9 @@
+:root {
+	/* Colors */
+	--color-white: 255 255 255;
+	--color-black: 0 0 0;
+	--color-primary-default: 9 107 222;
+
+	/* Components */
+	--color-button-bg: var(--color-primary-default);
+}
